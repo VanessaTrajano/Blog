@@ -2,31 +2,38 @@ import React from 'react'
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'
 import * as S from './Style'
 
-import Home from './components/Main/Home'
-import AboutMe from './components/Main/AboutMe'
-import ContactMe from './components/Main/ContactMe'
-import Projects from './components/Main/Projects'
+import Home from './components/Home'
+import AboutMe from './components/AboutMe'
+import Projects from './components/Projects'
 
-export default function App(){
-    return(
+import Insta from './images/instagram.png'
+import GitHub from './images/github.png'
+import Linkedin from './images/linkedin.png'
+
+export default function App() {
+    return (
         <Router>
-            <S.GlobalStyle/>
-            <img src=''/>
-            <nav>
-                <S.Ul>
-                    <S.RoutesLink to='/'><li>Home</li></S.RoutesLink>
-                    <S.RoutesLink to='/AboutMe'><li>About Me</li></S.RoutesLink>
-                    <S.RoutesLink to='/ContactMe'><li>Contact Me</li></S.RoutesLink>
-                    <S.RoutesLink to='/Projects'><li>Projects</li></S.RoutesLink>
-                </S.Ul>
-            </nav>
+            <S.GlobalStyle />
+            <S.Body>
+                <S.Nav>
+                    <S.LogoBox>
+                        <a href='https://www.instagram.com/vantrajano/' target='blank'><S.LogoImg src={Insta} /></a>
+                        <a href='https://github.com/VanessaTrajano' target='blank'><S.LogoImg src={GitHub} /></a>
+                        <a href='https://www.linkedin.com/in/vantrajano/' target='blank'><S.LogoImg src={Linkedin} /></a>
+                    </S.LogoBox>
+                    <S.Ul>
+                        <S.RoutesLink to='/'><li>Home</li></S.RoutesLink>
+                        <S.RoutesLink to='/AboutMe'><li>About Me</li></S.RoutesLink>
+                        <S.RoutesLink to='/Projects'><li>Projects</li></S.RoutesLink>
+                    </S.Ul>
+                </S.Nav>
 
-            <Routes>
-                <Route path='/' element={<Home/>}/>
-                <Route path='/AboutMe' element={<AboutMe/>}/>
-                <Route path='/ContactMe' element={<ContactMe/>}/>
-                <Route path='/Projects' element={<Projects/>}/>
-            </Routes>
+                <Routes>
+                    <Route path='/' element={<Home />} />
+                    <Route path='/AboutMe' element={<AboutMe />} />
+                    <Route path='/Projects' element={<Projects />} />
+                </Routes>
+            </S.Body>
         </Router>
     )
 }
