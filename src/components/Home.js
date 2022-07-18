@@ -6,11 +6,14 @@ export default function Home() {
     return (
         <S.MenuHome>
             <S.GlobalStyle />
-            <S.Aaa>
+            <S.PhotoBox>
                 <S.MyPhoto src={Foto} />
                 <S.Retangulo></S.Retangulo>
-            </S.Aaa>
-            <S.IntroHome>Olá! Meu nome é Vanessa. Bem vindo ao meu portfólio!</S.IntroHome>
+            </S.PhotoBox>
+            <S.TitleHomeBox>
+                <S.IntroHome>Vanessa Trajano</S.IntroHome>
+                <S.Web>Web Developer</S.Web>
+            </S.TitleHomeBox>
         </S.MenuHome>
     )
 }
