@@ -10,10 +10,10 @@ export default function AboutMe() {
                 <S.SmileImage src={Smile} />
             </S.TitleAboutBox>
             <S.TextBox>
-                <p>Eu sou Vanessa Trajano, uma desenvolvedora web que anda muito interessada no mundo da tecnologia nos últimos tempos.</p>
-                <p>Tenho 17 anos e vivo entre minha cidade natal e a cidade que eu estudo, Santana do Deserto e Juiz de Fora, respectivamente.</p>
-                <p>Estou cursando o 3° ano do ensino médio e técnico integrado em Desenvolvimento de Sistemas no Instituto Federal do Sudeste de Minas Gerais.</p>
-                <p>Estou sempre tentando aprender mais sobre o que é interessante para mim e adoro adquirir conhecimentos novos.</p>
+                <p>I’m Vanessa Trajano, a web developer who is very interested in the world of technology in recent times.</p>
+                <p>I’m 17 years old and I live between my hometown and the city I study, Santana do Deserto and Juiz de Fora, respectively.</p>
+                <p>I am attending the 3rd year of high school and integrated technician in Systems Development at the Instituto Federal do Sudeste de Minas Gerais.</p>
+                <p>I’m always trying to learn more about what’s interesting to me and I love to acquire new knowledge.</p>
             </S.TextBox>
         </S.AboutBox>
     )

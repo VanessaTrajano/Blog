@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import * as S from './Style'
 
 import Home from './components/Home'
@@ -25,6 +25,7 @@ export default function App() {
                         <S.RoutesLink to='/'><li>Home</li></S.RoutesLink>
                         <S.RoutesLink to='/AboutMe'><li>About Me</li></S.RoutesLink>
                         <S.RoutesLink to='/Projects'><li>Projects</li></S.RoutesLink>
+                        <S.LinkOnu target='blank' href='https://objs-sustentaveis.netlify.app'>Objetivos Sustentáveis</S.LinkOnu>
                     </S.Ul>
                 </S.Nav>
 
