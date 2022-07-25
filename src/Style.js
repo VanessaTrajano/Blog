@@ -21,6 +21,11 @@ export const MenuHome = styled.section`
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+
+    @media(max-width:680px){
+        flex-direction: column-reverse;
+        justify-content: center;
+    }
 `
 
 export const PhotoBox = styled.div`
@@ -30,6 +35,11 @@ export const PhotoBox = styled.div`
     flex-direction:column;
     justify-content: center;
     align-items:center;
+
+    @media(max-width:680px){
+        width: 48%;
+        height:65%;
+    }
 `
 
 export const Retangulo = styled.div`
@@ -40,6 +50,10 @@ export const Retangulo = styled.div`
     top: -2vh;
     left: 1vw;
     border-radius: 10px;
+
+    @media(max-width:450px){
+        width: 140%;
+    }
 `
 
 export const IntroHome = styled.h1`
@@ -56,6 +70,14 @@ export const TitleHomeBox = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items:center;
+
+    @media(max-width:942px){
+        width: 50%;
+    }
+
+    @media(max-width:680px){
+        width: 100%;
+    }
 `
 
 export const Web = styled.p`
@@ -70,7 +92,12 @@ export const Web = styled.p`
 `
 
 export const MyPhoto = styled.img`
-    width:20vw;
+    width: 81%;
+
+    @media(max-width:680px){
+        height:80%;
+        width: auto;
+    }
 `
 
 export const RoutesLink = styled(Link)`
@@ -91,9 +118,9 @@ export const RoutesLink = styled(Link)`
 export const Body = styled.div`
     background-color: #000;
     color: #00DF5E;
-    width: 100vw;
+    width: 100%;
     min-height: 100vh;
-    max-height: 200vh;
+    max-height: 300vh;
 `
 
 export const Nav = styled.nav`
@@ -101,6 +128,10 @@ export const Nav = styled.nav`
     height: 10vh;
     display: flex;
     justify-content: space-between;
+
+    @media(max-width: 450px){
+        height: 10vh;
+    }
 `
 
 export const Ul = styled.ul`
@@ -110,6 +141,10 @@ export const Ul = styled.ul`
     justify-content: space-evenly;
     align-items: center;
     font-size: 3vh;
+
+    @media(max-width:450px){
+        display:none;
+    }
 `
 
 export const LinkOnu = styled.a`
@@ -128,7 +163,7 @@ export const LinkOnu = styled.a`
 `
 
 export const LogoBox = styled.div`
-    width: 40%;
+    width: 50%;
     height: 100%;
     display: flex;
     justify-content: space-evenly;
@@ -138,6 +173,10 @@ export const LogoBox = styled.div`
 export const LogoImg = styled.img`
     width: 33%;
     margin-left: 10%;
+
+    @media(max-width:450px){
+        width: 60%;
+    }
 `
 
 export const AboutBox = styled.div`
@@ -150,7 +189,8 @@ export const AboutBox = styled.div`
 `
 
 export const TextBox = styled.div`
-    height: 60%;
+    min-height: 60%;
+    max-height: 90%;
     width: 80%;
     font-size: 3.5vh;
     text-align: center;
@@ -158,6 +198,7 @@ export const TextBox = styled.div`
     flex-direction: column;
     justify-content: space-evenly;
     align-items:center;
+    padding-bottom: 2vh;
 `
 
 export const TitleAboutBox = styled.div`
@@ -175,6 +216,10 @@ export const TitleAboutBox = styled.div`
 
 export const SmileImage = styled.img`
     width: 8%;
+
+    @media(max-width: 450px){
+        width: 12%;
+    }
 `
 
 export const ProjectsContainer = styled.div`
@@ -201,6 +246,13 @@ export const PeojectsBox = styled.div`
     justify-content: space-evenly;
     align-items: center;
     flex-wrap: wrap;
+
+    @media(max-width: 450px){
+        flex-direction: column;
+        flex-wrap: nowrap;
+        width: 100%;
+        height: 85%;
+    }
 `
 
 export const ProjectsLinkRecipes = styled.a`
@@ -220,6 +272,15 @@ export const ProjectsLinkRecipes = styled.a`
         height: 12%;
         text-align: center;
         color: #00DF5E;
+
+        @media(max-width: 450px){
+            height: 25%;
+        }
+    }
+
+    @media(max-width: 450px){
+        width: 50%;
+        height: 22%;
     }
 `
 
@@ -240,6 +301,15 @@ export const ProjectsLinkVanflix = styled.a`
         height: 12%;
         text-align: center;
         color: #00DF5E;
+
+        @media(max-width: 450px){
+            height: 25%;
+        }
+    }
+    
+    @media(max-width: 450px){
+        width: 50%;
+        height: 22%;
     }
 `
 
@@ -260,6 +330,15 @@ export const ProjectsLinkTodoFlix = styled.a`
         height: 12%;
         text-align: center;
         color: #00DF5E;
+
+        @media(max-width: 450px){
+            height: 25%;
+        }
+    }
+    
+    @media(max-width: 450px){
+        width: 50%;
+        height: 22%;
     }
 `
 
@@ -279,6 +358,52 @@ export const ProjectsLinkDogs = styled.a`
         width: 100%;
         height: 12%;
         text-align: center;
+        color: #00DF5E;
+
+        @media(max-width: 450px){
+            height: 25%;
+        }
+    }
+    
+    @media(max-width: 450px){
+        width: 50%;
+        height: 22%;
+    }
+`
+
+export const HamburguerMenuImage = styled.img`
+    @media(min-width:451px){
+        display:none;
+    }
+
+    width: 15%;
+    z-index:1;
+`
+
+export const HamburguerMenu = styled.ul`
+    list-style:none;
+    background-color: #000;
+    display:flex;
+    flex-direction: column;
+    height: fit-content;
+    width: 60%;
+    border: 2px double #00DF5E;
+    font-size: 3.5vh;
+    padding: 1%;
+    border-radius: 0 0 0 3vh;
+    position: absolute;
+    left: 40vw;
+    z-index: 1;
+
+    li{
+        width: 100%;
+        height: 5vh;
+        text-align:center;
+        border-bottom: 1% solid #00DF5E;
+    }
+
+    a{
+        text-decoration: overline;
         color: #00DF5E;
     }
 `

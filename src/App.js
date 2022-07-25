@@ -1,16 +1,26 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import * as S from './Style'
 
 import Home from './components/Home'
 import AboutMe from './components/AboutMe'
 import Projects from './components/Projects'
+import MenuHamburguer from './components/MenuHamburguer'
 
 import Insta from './images/instagram.png'
 import GitHub from './images/github.png'
 import Linkedin from './images/linkedin.png'
+import imageMenuClosed from './images/imageMenuClosed.png'
+import imageMenuOpen from './images/imageMenuOpen.png'
 
 export default function App() {
+
+    const [hamburguer, setHamburguer] = useState(false)
+
+    const OpenMenu = () => {
+        setHamburguer(!hamburguer)
+    }
+
     return (
         <Router>
             <S.GlobalStyle />
@@ -27,6 +37,11 @@ export default function App() {
                         <S.RoutesLink to='/Projects'><li>Projects</li></S.RoutesLink>
                         <S.LinkOnu target='blank' href='https://objs-sustentaveis.netlify.app'>Objetivos Sustentáveis</S.LinkOnu>
                     </S.Ul>
+
+                    {hamburguer && <MenuHamburguer action={() => {OpenMenu()}} path1='/' path2='/AboutMe' path3='/Projects'/>}
+
+                    {hamburguer ? <S.HamburguerMenuImage onClick={() => {OpenMenu()}} src={imageMenuOpen}/> : <S.HamburguerMenuImage onClick={() => {OpenMenu()}} src={imageMenuClosed}/>}
+
                 </S.Nav>
 
                 <Routes>
